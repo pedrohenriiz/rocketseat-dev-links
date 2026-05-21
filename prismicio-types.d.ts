@@ -92,16 +92,41 @@ export interface LinkTreeDocumentDataLinksItem {
    * - **Documentation**: https://prismic.io/docs/fields/link
    */
   url: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
+}
 
+/**
+ * Item in *link_tree → icons*
+ */
+export interface LinkTreeDocumentDataIconsItem {
   /**
-   * icon field in *link_tree → Links*
+   * icon field in *link_tree → icons*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: link_tree.links[].icon
+   * - **API ID Path**: link_tree.icons[].icon
    * - **Documentation**: https://prismic.io/docs/fields/text
    */
   icon: prismic.KeyTextField;
+
+  /**
+   * rede_social field in *link_tree → icons*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: link_tree.icons[].rede_social
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  rede_social: prismic.KeyTextField;
+
+  /**
+   * url field in *link_tree → icons*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: link_tree.icons[].url
+   * - **Documentation**: https://prismic.io/docs/fields/link
+   */
+  url: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
 }
 
 /**
@@ -151,6 +176,17 @@ interface LinkTreeDocumentData {
    * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
    */
   links: prismic.GroupField<Simplify<LinkTreeDocumentDataLinksItem>>;
+
+  /**
+   * icons field in *link_tree*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: link_tree.icons[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  icons: prismic.GroupField<Simplify<LinkTreeDocumentDataIconsItem>>;
 }
 
 /**
@@ -305,6 +341,7 @@ declare module "@prismicio/client" {
       LinkTreeDocument,
       LinkTreeDocumentData,
       LinkTreeDocumentDataLinksItem,
+      LinkTreeDocumentDataIconsItem,
       LinktreeDocument,
       LinktreeDocumentData,
       LinktreeDocumentDataSlicesSlice,

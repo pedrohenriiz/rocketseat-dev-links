@@ -53,12 +53,39 @@
                 "allowText": true,
                 "repeat": false
               }
-            },
+            }
+          }
+        }
+      },
+      "icons": {
+        "type": "Group",
+        "config": {
+          "label": "icons",
+          "repeat": true,
+          "fields": {
             "icon": {
               "type": "Text",
               "config": {
                 "label": "icon",
                 "placeholder": ""
+              }
+            },
+            "rede_social": {
+              "type": "Text",
+              "config": {
+                "label": "rede_social",
+                "placeholder": ""
+              }
+            },
+            "url": {
+              "type": "Link",
+              "config": {
+                "label": "url",
+                "placeholder": "",
+                "select": null,
+                "allowTargetBlank": true,
+                "allowText": true,
+                "repeat": false
               }
             }
           }

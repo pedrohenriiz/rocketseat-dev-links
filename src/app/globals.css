@@ -3,21 +3,77 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  /* Toggle colors */
+  --toggle-colors: #000000;
+
+  /* Text colors */
+  --text-color-mode: #000000;
+
+  /* Stroke colors */
+  --stroke-color-mode: rgba(0, 0, 0, 50%);
+
+  /* Surface colors */
+  --surface-color-mode: rgba(0, 0, 0, 5%);
+  --surface-color-mode-hover: rgba(0, 0, 0, 2%);
+
+  /* Highlight colors */
+  --highlight-color-mode: rgba(0, 0, 0, 10%);
+
+  --font-inter: Inter, sans-serif;
 }
 
 .dark {
   --background: #0a0a0a;
   --foreground: #ededed;
+
+  /* Toggle colors */
+  --toggle-colors: #ffffff;
+
+  /* Text colors */
+  --text-color-mode: #ffffff;
+
+  /* Stroke colors */
+  --stroke-color-mode: rgba(255, 255, 255, 50%);
+
+  /* Surface colors */
+  --surface-color-mode: rgba(255, 255, 255, 10%);
+  --surface-color-mode-hover: rgba(255, 255, 255, 5%);
+
+  /* Highlight colors */
+  --highlight-color-mode: rgba(255, 255, 255, 20%);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  --color-toggle-colors: var(--toggle-colors);
+  --color-text-color-mode: var(--text-color-mode);
+
+  --color-stroke-color-mode: var(--stroke-color-mode);
+  --color-surface-color-mode: var(--surface-color-mode);
+  --color-surface-color-mode-hover: var(--surface-color-mode-hover);
+
+  --color-highlight-color-mode: var(--highlight-color-mode);
+  --font-inter: var(--font-inter);
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
+}
+
+@layer base {
+  .container {
+    @apply mx-auto max-w-145;
+  }
+
+  .typography-md {
+    @apply text-[16px] leading-6 font-medium font-inter;
+  }
+
+  .typography-sm {
+    @apply text-[14px] leading-6 font-normal font-inter;
+  }
 }
