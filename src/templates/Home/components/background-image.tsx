@@ -14,7 +14,7 @@ export default function BackgroundImage() {
   const darkImage =
     'bg-[url(/assets/bg-mobile.jpg)] lg:bg-[url(/assets/bg-desktop.jpg)]';
   const lightImage =
-    'bg-[url(/assets/bg-mobile-light.jpg)] lg:bg-[url(/assets/bg-desktop-light.png)]';
+    'bg-[url(/assets/bg-mobile-light.jpg)] lg:bg-[url(/assets/bg-desktop-light.jpg)]';
 
   const themeBackgroundImage =
     mounted && resolvedTheme === 'dark' ? darkImage : lightImage;
