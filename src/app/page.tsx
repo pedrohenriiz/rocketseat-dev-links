@@ -6,8 +6,6 @@ export default async function Home() {
   const page = await client.getSingle('link_tree');
   const { avatar, name, links, icons } = page.data;
 
-  console.log(`links`, links);
-
   return (
     <HomeTemplate avatar={avatar} name={name} links={links} icons={icons} />
   );

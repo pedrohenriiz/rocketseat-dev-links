@@ -57,7 +57,6 @@ export default function HomeTemplate({
 
         <ul className='container flex flex-col items-center justify-center my-6 gap-4 '>
           {links.map((item, i) => {
-            console.log(item);
             return (
               <Link
                 className='px-6 py-4 typography-md bg-surface-color-mode rounded-lg border border-stroke-color-mode'
