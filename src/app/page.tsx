@@ -1,14 +1,10 @@
-'use client';
-import Image from 'next/image';
-import { useTheme } from 'next-themes';
+import { createClient } from '@/prismicio';
+import HomeTemplate from '@/templates/Home';
 
-export default function Home() {
-  const { setTheme } = useTheme();
+export default async function Home() {
+  const client = createClient();
+  const page = await client.getSingle('link_tree');
+  const { avatar, name, bio, links } = page.data;
 
-  return (
-    <div className='flex flex-col flex-1 items-center justify-center font-sans '>
-      <button onClick={() => setTheme('light')}>Light</button>
-      <button onClick={() => setTheme('dark')}>Dark</button>
-    </div>
-  );
+  return <HomeTemplate avatar={avatar} name={name} bio={bio} links={links} />;
 }

@@ -1,0 +1,30 @@
+{
+  "id": "link_tree",
+  "type": "SharedSlice",
+  "name": "LinkTree",
+  "description": "LinkTree",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "teste": {
+          "type": "Link",
+          "config": {
+            "label": "teste",
+            "placeholder": "Teste",
+            "select": null,
+            "allowTargetBlank": true,
+            "allowText": true,
+            "repeat": false
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

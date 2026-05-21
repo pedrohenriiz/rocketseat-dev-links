@@ -1,0 +1,69 @@
+{
+  "format": "custom",
+  "id": "link_tree",
+  "label": "link_tree",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "avatar": {
+        "type": "Image",
+        "config": {
+          "label": "Foto de perfil",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "name": {
+        "type": "Text",
+        "config": {
+          "label": "Nome",
+          "placeholder": "Nome"
+        }
+      },
+      "bio": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Bio",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "links": {
+        "type": "Group",
+        "config": {
+          "label": "Links",
+          "repeat": true,
+          "fields": {
+            "label": {
+              "type": "Text",
+              "config": {
+                "label": "label",
+                "placeholder": ""
+              }
+            },
+            "url": {
+              "type": "Link",
+              "config": {
+                "label": "url",
+                "placeholder": "",
+                "select": null,
+                "allowTargetBlank": true,
+                "allowText": true,
+                "repeat": false
+              }
+            },
+            "icon": {
+              "type": "Text",
+              "config": {
+                "label": "icon",
+                "placeholder": ""
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
